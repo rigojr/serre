@@ -3,30 +3,21 @@ import { defineComponent } from 'vue';
 
 import NavBarWidget from '@src/widgets/nav-bar-widget.vue';
 import CardWidget from '@src/widgets/card-widget.vue';
-
-import { CardWidgetProperties } from '@src/widgets/card-widget-properties';
-
-const projects: CardWidgetProperties[] = [
-  {
-    'image': 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
-    'title': 'Title 1',
-    'content': 'test content',
-  }
-]
+import FooterWidget from '@src/widgets/footer-widget.vue';
 
 /**
  * Setups the view.
  */
 function setup(): Record<string, unknown> {
-  return {
-  };
+  return {};
 }
 
 export default defineComponent({
   'name': 'dashboard-view',
   'components': {
     NavBarWidget,
-    CardWidget
+    CardWidget,
+    FooterWidget
   },
   'setup': setup
 });
@@ -43,6 +34,7 @@ export default defineComponent({
         :badges="['netural', 'basic', 'theme']"
       />
     </div>
+    <footer-widget />
   </div>
 </template>
 
